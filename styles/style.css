@@ -473,7 +473,7 @@ li:hover {
 
 .menu-wrap .toggler {
   position: absolute;
-  top: 8px;
+  top: 7px;
   left: 25px;
   z-index: 2;
   cursor: pointer;
@@ -484,7 +484,7 @@ li:hover {
 
 .menu-wrap .hamburger {
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 20px;
   z-index: 1;
   width: 60px;
