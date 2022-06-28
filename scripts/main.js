@@ -27,8 +27,6 @@ window.addEventListener('scroll', function (e) {
         hamburger.classList.add("slideDown");
         header.classList.add("scrolled");
         hamburger.classList.add("scrolled");
-
-
     }
     new_scroll_position = last_scroll_position;
 });
