@@ -26,6 +26,7 @@ body {
   --overlay-color: rgba(24, 39, 51, 0.85);
   --menu-speed: 0.75s;
   --brand-color: #3300cc;
+  --body-color: #121520;
 }
 
 a,
@@ -164,7 +165,24 @@ h6,
 }
 
 .fixed-header {
+  position: fixed;
   top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.slideUp {
+  transform: translateY(-130px);
+  transition: transform 0.5s ease-out;
+}
+
+.scrolled {
+  background-color: var(--body-color);
+}
+
+.slideDown {
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
 }
 
 .fixed-footer {
@@ -177,6 +195,11 @@ h6,
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 .header-nav ul {
@@ -205,7 +228,7 @@ h6,
   text-decoration: none;
 }
 
-li {
+.header-nav li {
   background: linear-gradient(to right, #3300cc, #3300cc), linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 180), #3300cc);
   background-size: 100% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
@@ -451,7 +474,7 @@ li:hover {
 .menu-wrap .toggler {
   position: absolute;
   top: 10px;
-  left: 24px;
+  left: 25px;
   z-index: 2;
   cursor: pointer;
   width: 50px;
