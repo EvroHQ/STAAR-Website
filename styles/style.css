@@ -169,20 +169,17 @@ h6,
   top: 0;
   width: 100%;
   z-index: 1;
-}
-
-.slideUp {
-  transform: translateY(-130px);
-  transition: transform 0.5s ease-out;
-}
-
-.scrolled {
   background-color: var(--body-color);
 }
 
-.slideDown {
-  transform: translateY(0);
-  transition: transform 0.5s ease-out;
+.smaller {
+  padding: 0px;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
 }
 
 .fixed-footer {
@@ -452,11 +449,13 @@ li:hover {
 }
 .header-logo {
   margin-top: 7px;
+  transition: 0.4s;
 }
 
 .header-logo img {
   width: auto;
   height: 50px;
+  transition: 0.4s;
 }
 
 .no-scroll {
@@ -484,7 +483,7 @@ li:hover {
 
 .menu-wrap .hamburger {
   position: absolute;
-  top: 2px;
+  top: 1px;
   left: 20px;
   z-index: 1;
   width: 60px;
@@ -495,6 +494,7 @@ li:hover {
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  transition: 0.4s;
 }
 
 /* Hamburger Line */
@@ -729,8 +729,20 @@ li:hover {
     height: 40px;
   }
 
+  .header-container {
+    padding: 15px 0;
+  }
+
   .header-logo {
-    margin-top: 7px;
+    margin-top: 0;
+  }
+
+  .menu-wrap .hamburger {
+    top: -17px;
+  }
+
+  .menu-wrap .toggler {
+    top: -12px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
@@ -745,6 +757,10 @@ li:hover {
   .container {
     width: 95%;
     max-width: 920px;
+  }
+
+  .menu-wrap .hamburger {
+    top: 2px;
   }
 }
 @media (max-width: 768px) {

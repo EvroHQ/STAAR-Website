@@ -11,11 +11,8 @@
 </head>
 
 <body>
-    <!-- Full Width Background Image -->
-    <div class="fullwidth"></div>
-
     <!-- Mobile Navigation -->
-    <div class="menu-wrap">
+    <section class="menu-wrap">
         <input type="checkbox" class="toggler">
         <div class="hamburger" id="hamburger">
             <div></div>
@@ -28,20 +25,20 @@
                         <li><a href="#abou">About</a></li>
                         <li><a href="#getstarted">Get Started</a></li>
                     </ul>
-                    <a href="https://coinmarketcap.com" target="_blank"><button class="btn_buy_mobile glow-on-hover-white-mobile">Buy
-                        STAAR</button></a>
+                    <a href="https://coinmarketcap.com" target="_blank"><button
+                            class="btn_buy_mobile glow-on-hover-white-mobile">Buy
+                            STAAR</button></a>
                 </div>
 
-                    </ul>
-                </div>
+                </ul>
             </div>
         </div>
-    </div>
-
+        </div>
+    </section>
     <!-- Desktop Navigation -->
-    <div class="fixed-header">
+    <section class="fixed-header" id="header">
         <div class="container">
-            <div class="header-container" id="header">
+            <div class="header-container">
                 <div class="header-logo">
                     <a href="index.html"><img src="./images/logo-svg-white.svg" alt="logo"></a>
                 </div>
@@ -56,12 +53,12 @@
                         STAAR</button></a>
             </div>
         </div>
-    </div>
-
-    <main class="main__screen">
-
+    </section>
+    <!-- Main 100vh Screen -->
+    <section class="fullwidth"></section>
+    <section class="main__screen">
         <!-- Hero Section -->
-        <section class="hero">
+        <div class="hero">
             <div class="container">
                 <div class="hero-text">
                     <h1>STAAR</h1>
@@ -71,9 +68,11 @@
                             STAAR</button></a>
                 </div>
             </div>
-    </main>
-
-    <div class="modal">
+        </div>
+        </div>
+    </section>
+    <!-- Modal Section -->
+    <section class="modal">
         <div class="container">
             <div class="modal-body">
                 <div class="modal-body__text-box">
@@ -101,14 +100,13 @@
                 <img src="./images/modal-rocket.png" alt="rocket" width="245" height="245" class="modal-img">
             </div>
         </div>
-    </div>
+    </section>
+    <!-- Guide Section -->
+    
 
-    <script>
-        document.querySelector('menu-wrap').addEventListener('tap', function () { document.querySelector('menu').classList.toggle('no-scroll') });
-    </script>
-
+    
+    <!-- JavaScript -->
     <script src="./scripts/main.js"></script>
-
 </body>
 
 </html>
