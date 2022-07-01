@@ -121,7 +121,7 @@ h6,
 }
 
 .hero-text {
-    padding-top: 150px;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -144,7 +144,7 @@ h6,
     -webkit-background-clip: text;
     margin: 0 auto;
     color: transparent;
-    font-size: calc(74px + 68 * (100vw - 100px) / 1000)
+    font-size: calc(60px + 100 * (100vw - 100px) / 1000)
 }
 
 .hero-text h2 {
@@ -153,9 +153,8 @@ h6,
     font-family: var(--font-family-worksans);
     text-align: center;
     color: #fff;
-    margin: -20px auto 0 auto;
+    margin: 0 auto;
     font-size: calc(16px + (24 - 14) * ((100vw - 100px) / (1600 - 300)));
-
 }
 
 .hero-text a {
