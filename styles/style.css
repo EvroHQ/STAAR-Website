@@ -130,14 +130,14 @@ h6,
 .hero-text h1 {
   font-family: var(--font-family-worksans);
   max-width: 1100px;
-  padding-top: 110px;
+  padding-top: 80px;
   font-weight: 800;
   background: linear-gradient(to right, #3f0000, #da002d, #ffe200);
   background-clip: text;
   -webkit-background-clip: text;
   margin: 0 auto;
   color: transparent;
-  font-size: calc(48px + 98 * (100vw - 100px) / 1300);
+  font-size: calc(74px + 68 * (100vw - 100px) / 1000);
 }
 
 .hero-text h2 {
@@ -146,7 +146,7 @@ h6,
   font-family: var(--font-family-worksans);
   text-align: center;
   color: #fff;
-  margin: 0 auto;
+  margin: -20px auto 0 auto;
   font-size: calc(16px + 10 * (100vw - 100px) / 1300);
 }
 
