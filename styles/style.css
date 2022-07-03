@@ -945,7 +945,7 @@ li:hover {
   }
 
   .hero-text {
-    padding-top: 80px;
+    padding-top: 50px;
   }
 
   .heading {
@@ -967,6 +967,10 @@ li:hover {
 
   .grid-12 {
     grid-gap: 0 15px;
+  }
+
+  .modal {
+    top: -110px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
