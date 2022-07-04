@@ -513,8 +513,8 @@ li:hover {
 
 .guide-item__img {
   max-width: 150px;
-  max-height: 80px;
-  margin: 75px 0 20px 0;
+  max-height: 150px;
+  margin: 37px 0 0 0;
 }
 
 .guide__item--one {
