@@ -11,7 +11,7 @@ window.onload = (function () {
 
 // Open Menu on hamburger click //
 
-if ('ontouchstart' in window) { var click = 'touchstart'; }
+if ('touchstart' in window) { var click = 'touchstart'; }
 else { var click = 'click'; }
 
 
