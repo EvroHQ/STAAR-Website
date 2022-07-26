@@ -22,9 +22,7 @@ $('div.burger').on(click, function () {
 
 // Mobile Menu Scroll To Anchor //
 
-var click = 'click touchstart';
-
-$('div.menu ol li').on(click, function (e) {
+$('div.menu ol li a').on(click, function (e) {
     closeMenu();
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
