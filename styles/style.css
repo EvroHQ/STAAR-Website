@@ -1067,6 +1067,8 @@ div.menu {
   opacity: 0;
   font-family: var(--font-family-worksans);
   font-weight: 600;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .opacity {
