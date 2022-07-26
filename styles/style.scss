@@ -1175,6 +1175,7 @@ div.menu {
     align-items: center;
     transition: 0.5s all;
     opacity: 0;
+    backdrop-filter: blur(10px);
 }
 
 .opacity {
