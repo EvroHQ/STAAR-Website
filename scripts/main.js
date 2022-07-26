@@ -11,6 +11,8 @@ window.onload = (function () {
     }, { passive: true })
 });
 
+// Mobile Menu //
+
 if ('ontouchstart' in window) { var click = 'touchstart'; }
 else { var click = 'click'; }
 
@@ -20,6 +22,7 @@ $('div.burger').on(click, function () {
     else { closeMenu(); }
 });
 
+// Mobile Menu Scroll To Anchor //
 
 $('div.menu ol li a').on(click, function (e) {
     e.preventDefault();
@@ -37,6 +40,7 @@ $('div.menu ol li a').on(click, function (e) {
 });
 
 
+// Open Mobile Menu //
 
 function openMenu() {
 
@@ -60,6 +64,8 @@ function openMenu() {
         $('div.z').addClass('rotate135');
     }, 120);
 }
+
+// Close Mobile Menu //
 
 function closeMenu() {
 

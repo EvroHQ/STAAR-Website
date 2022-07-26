@@ -1175,9 +1175,6 @@ div.menu {
     align-items: center;
     transition: 0.5s all;
     opacity: 0;
-    font-family: var(--font-family-worksans);
-    font-weight: 600;
-    backdrop-filter: blur(10px);
 }
 
 .opacity {
@@ -1202,6 +1199,8 @@ div.menu ol li a {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0px;
+    font-family: var(--font-family-worksans);
+    font-weight: 600;
 }
 
 section>div {
