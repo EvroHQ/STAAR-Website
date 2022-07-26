@@ -22,13 +22,15 @@ $('div.burger').on(click, function () {
 
 // Mobile Menu Scroll To Anchor //
 
+var click = 'click touchstart';
+
 $('div.menu ol li').on(click, function (e) {
-    e.preventDefault();
     closeMenu();
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('touchstart click', function (e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
+
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
