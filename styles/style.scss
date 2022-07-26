@@ -21,6 +21,14 @@ body {
     letter-spacing: -0.02rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
 :root {
     --background-color: #141825;
     --font-family-sans-serif: 'Nunito', sans-serif;
@@ -111,7 +119,8 @@ h6,
     position: absolute;
     background-image: url("../images/background-staar.jpg");
     background-size: cover;
-    background-position: center top;
+    background-position: center;
+    background-position-y: 30px;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
@@ -185,6 +194,11 @@ h6,
     backdrop-filter: blur(5px);
 }
 
+.hidden {
+    transition: 100ms all ease-in-out;
+    opacity: 0;
+}
+
 .smaller {
     padding: 0px;
 }
@@ -206,7 +220,7 @@ h6,
     align-items: center;
 }
 
-.header-nav ul {
+.header-nav ol {
     display: flex;
     list-style: none;
     margin-top: 20px;
@@ -341,7 +355,7 @@ li:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(20deg, hsl(0, 100%, 12%, 0), hsl(348, 100%, 43%, 1), hsl(53, 100%, 50%, 1));
+    background: linear-gradient(20deg, hsl(0, 100%, 12%, 1), hsl(348, 100%, 43%, 1), hsl(53, 100%, 50%, 1));
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 1px 3px 15px -1px rgba(0, 0, 0, 0);
     left: 0;
     top: 0;
@@ -467,6 +481,7 @@ li:hover {
 
 .guide {
     margin: -30px 0 120px 0;
+    padding: 4em 0;
     width: 100%;
 }
 
@@ -677,159 +692,12 @@ li:hover {
     overflow: hidden;
 }
 
-/* MENU STYLES */
 
-.menu-wrap {
-    position: absolute;
-    top: 30px;
-    right: 100px;
-    z-index: 10;
-}
+// START Mobile Navigation //
 
-.menu-wrap .toggler {
-    position: absolute;
-    top: 7px;
-    left: 25px;
-    z-index: 2;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    opacity: 0;
-}
 
-.menu-wrap .hamburger {
-    position: absolute;
-    top: 1px;
-    left: 20px;
-    z-index: 1;
-    width: 60px;
-    height: 60px;
-    padding: 1rem;
-    display: flex;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    transition: 0.4s;
-}
+// END Mobile Navigation //
 
-/* Hamburger Line */
-.menu-wrap .hamburger>div {
-    position: relative;
-    flex: none;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
-}
-
-/* Hamburger Lines - Top & Bottom */
-.menu-wrap .hamburger>div::before,
-.menu-wrap .hamburger>div::after {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    top: -10px;
-    width: 100%;
-    height: 2px;
-    background: inherit;
-}
-
-/* Moves Line Down */
-.menu-wrap .hamburger>div::after {
-    top: 10px;
-}
-
-/* Toggler Animation */
-.menu-wrap .toggler:checked+.hamburger>div {
-    transform: rotate(135deg);
-}
-
-/* Turns Lines Into X */
-.menu-wrap .toggler:checked+.hamburger>div:before,
-.menu-wrap .toggler:checked+.hamburger>div:after {
-    top: 0;
-    transform: rotate(90deg);
-}
-
-/* Rotate On Hover When Checked */
-.menu-wrap .toggler:checked:hover+.hamburger>div {
-    transform: rotate(225deg);
-}
-
-/* Show Menu */
-.menu-wrap .toggler:checked~.menu {
-    visibility: visible;
-}
-
-.menu-wrap .toggler:checked~.menu>div {
-    transform: scale(1);
-    transition-duration: var(--menu-speed);
-}
-
-.menu-wrap .toggler:checked~.menu>div>div {
-    opacity: 1;
-    transition: opacity 0.4s ease 0.4s;
-}
-
-.menu-wrap .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(5px);
-}
-
-.menu-wrap .menu>div {
-    background: var(--black-background);
-    opacity: 0.9;
-    border-radius: 10%;
-    width: 300vw;
-    height: 300vw;
-    display: flex;
-    flex: none;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0);
-    transition: all 0.4s ease;
-    z-index: 1;
-}
-
-.menu-wrap .menu>div>div {
-    text-align: center;
-    max-width: 100vw;
-    max-height: 100vh;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.menu-wrap .menu>div>div>ul>li {
-    list-style: none;
-    color: #fff;
-    font-size: 1.5rem;
-    padding: 1.5rem;
-    opacity: 1;
-}
-
-.menu-wrap .menu>div>div>ul>li>a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.4s ease;
-    font-family: var(--font-family-worksans);
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #fff;
-}
 
 .main__screen {
     height: 110vh;
@@ -848,6 +716,7 @@ li:hover {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
 }
 
 .modal-body__text-box {
@@ -957,14 +826,6 @@ li:hover {
         margin-top: 0;
     }
 
-    .menu-wrap .hamburger {
-        top: -17px;
-    }
-
-    .menu-wrap .toggler {
-        top: -12px;
-    }
-
     .hero-text {
         padding-top: 15vh;
     }
@@ -989,9 +850,19 @@ li:hover {
     .grid-12 {
         grid-gap: 0 15px;
     }
-    
+
     .modal {
         top: -110px;
+    }
+
+    div.burger {
+        height: 45px !important;
+        width: 40px;
+        position: fixed;
+        top: 11px;
+        right: 50px;
+        cursor: pointer;
+        z-index: 9999;
     }
 }
 
@@ -1009,10 +880,6 @@ li:hover {
         width: 95%;
         max-width: 920px;
     }
-
-    .menu-wrap .hamburger {
-        top: 2px;
-    }
 }
 
 @media (min-width: 992px) {
@@ -1021,6 +888,9 @@ li:hover {
     }
 
     .menu-wrap {
+        display: none;
+    }
+    div.burger {
         display: none;
     }
 }
@@ -1155,4 +1025,296 @@ li:hover {
     .container {
         max-width: 1140px;
     }
+}
+
+
+
+// Mobile Menu //
+
+.max_index {
+    z-index: 9999;
+}
+
+div.burger {
+    height: 65px;
+    width: 40px;
+    position: fixed;
+    top: 11px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 0.3s all ease;
+}
+
+div.x,
+div.y,
+div.z {
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    background: #ffffff;
+    border-radius: 2px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+div.x,
+div.y,
+div.z {
+    height: 3px;
+    width: 30px;
+}
+
+div.y {
+    top: 18px;
+}
+
+div.z {
+    top: 37px;
+}
+
+div.collapse {
+    top: 20px;
+    -webkit-transition: all 70ms ease-out;
+    -moz-transition: all 70ms ease-out;
+    -ms-transition: all 70ms ease-out;
+    -o-transition: all 70ms ease-out;
+    transition: all 70ms ease-out;
+}
+
+
+div.rotate30 {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    -webkit-transition: all 50ms ease-out;
+    -moz-transition: all 50ms ease-out;
+    -ms-transition: all 50ms ease-out;
+    -o-transition: all 50ms ease-out;
+    transition: all 50ms ease-out;
+}
+
+div.rotate150 {
+    -ms-transform: rotate(150deg);
+    -webkit-transform: rotate(150deg);
+    transform: rotate(150deg);
+    -webkit-transition: all 50ms ease-out;
+    -moz-transition: all 50ms ease-out;
+    -ms-transition: all 50ms ease-out;
+    -o-transition: all 50ms ease-out;
+    transition: all 50ms ease-out;
+}
+
+div.rotate45 {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+div.rotate135 {
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+div.menu-bg {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000f5;
+    opacity: 0;
+    -webkit-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -moz-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -o-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    backdrop-filter: blur(25px);
+}
+
+div.menu-bg.animate {
+    opacity: 0.9;
+    -webkit-transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -moz-transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -o-transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+}
+
+div.menu {
+    display: flex;
+    max-width: 100%;
+    position: fixed;
+}
+
+.menu-splitL,
+.menu-splitR {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    top: 20vh;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    align-items: center;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.opacity {
+    opacity: 1;
+}
+
+div.menu ol li {
+    list-style: none;
+    width: 320px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 19px;
+    -webkit-transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -moz-transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -o-transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+}
+
+div.menu ol li a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0px;
+}
+
+section>div {
+    transition: transform 1s;
+    transform: translateX(0px);
+}
+
+div.menu li.animate {
+    font-size: 19px;
+    opacity: 1;
+    -webkit-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -moz-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -ms-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    -o-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+}
+
+.menu-splitL li:nth-of-type(1) {
+    opacity: 1;
+    transition-delay: 0.12s;
+}
+
+.menu-splitL li.animate:nth-of-type(1) {
+    transition-delay: 0.0s;
+    opacity: 1;
+}
+
+.menu-splitL li:nth-of-type(2) {
+    transition-delay: 0.09s;
+    opacity: 1;
+}
+
+.menu-splitL li.animate:nth-of-type(2) {
+    transition-delay: 0.05s;
+    opacity: 1;
+}
+
+.menu-splitL li:nth-of-type(3) {
+    transition-delay: 0.046s;
+    opacity: 1;
+}
+
+.menu-splitL li.animate:nth-of-type(3) {
+    transition-delay: 0.1s;
+    opacity: 1;
+}
+
+.menu-splitL li:nth-of-type(4) {
+    transition-delay: 0.03s;
+    opacity: 1;
+}
+
+.menu-splitL li.animate:nth-of-type(4) {
+    transition-delay: 0.15s;
+    opacity: 1;
+}
+
+.menu-splitL li:nth-of-type(5) {
+    transition-delay: 0.0s;
+    opacity: 1;
+}
+
+.menu-splitL li.animate:nth-of-type(5) {
+    transition-delay: 0.2s;
+    opacity: 1;
+}
+
+
+
+.menu-splitR li:nth-of-type(1) {
+    transition-delay: 0.12s;
+    opacity: 1;
+}
+
+.menu-splitR li.animate:nth-of-type(1) {
+    transition-delay: 0.0s;
+    opacity: 1;
+}
+
+.menu-splitR li:nth-of-type(2) {
+    transition-delay: 0.069s;
+    opacity: 1;
+}
+
+.menu-splitR li.animate:nth-of-type(2) {
+    transition-delay: 0.05s;
+    opacity: 1;
+}
+
+.menu-splitR li:nth-of-type(3) {
+    transition-delay: 0.06s;
+    opacity: 1;
+}
+
+.menu-splitR li.animate:nth-of-type(3) {
+    transition-delay: 0.1s;
+    opacity: 1;
+}
+
+.menu-splitR li:nth-of-type(4) {
+    transition-delay: 0.03s;
+    opacity: 1;
+}
+
+.menu-splitR li.animate:nth-of-type(4) {
+    transition-delay: 0.15s;
+    opacity: 1;
+}
+
+.menu-splitR li:nth-of-type(5) {
+    transition-delay: 0.0s;
+    opacity: 1;
+}
+
+.menu-splitR li.animate:nth-of-type(5) {
+    transition-delay: 0.2s;
+    opacity: 1;
 }

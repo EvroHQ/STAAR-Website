@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./images/staar-fav32.png" type="image/x-icon">
     <title>STAAR | Together we will reach the STAAR's</title>
@@ -14,201 +16,206 @@
 
 <body>
     <!-- Mobile Navigation -->
-    <section class="menu-wrap">
-        <input type="checkbox" class="toggler">
-        <div class="hamburger" id="hamburger">
-            <div></div>
-        </div>
-        <div class="menu">
-            <div>
-                <div>
-                    <ul>
-                        <li><a href="#community">Community</a></li>
-                        <li><a href="#abou">About</a></li>
-                        <li><a href="#getstarted">Get Started</a></li>
-                    </ul>
+    <div class="list">
+        <div class="item">
+            <div class="menu-bg"></div>
+            <div class="menu">
+                <ol class="menu-splitL">
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#getstarted">Get Started</a></li><br><br>
                     <a href="https://coinmarketcap.com" target="_blank"><button
-                            class="btn_buy_mobile glow-on-hover-white-mobile">Buy
-                            STAAR</button></a>
-                </div>
+                                class="btn_buy_white glow-on-hover-white">Buy
+                                STAAR</button></a>
+                </ol>
 
-                </ul>
             </div>
-        </div>
-        </div>
-    </section>
-    <!-- Desktop Navigation -->
-    <section class="fixed-header" id="header">
-        <div class="container">
-            <div class="header-container">
-                <div class="header-logo">
-                    <a href="index.html"><img src="./images/logov2.png" alt="logo"></a>
-                </div>
-                <div class="header-nav h5">
-                    <ul>
-                        <li><a href="#community">Community</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#getstarted">Get Started</a></li>
-                    </ul>
-                </div>
-                <a href="https://coinmarketcap.com" target="_blank"><button class="btn_buy glow-on-hover">Buy
-                        STAAR</button></a>
+            <div class="burger">
+                <div class="x"></div>
+                <div class="y"></div>
+                <div class="z"></div>
             </div>
+
+
+
+            <!-- Desktop Navigation -->
+            <header class="fixed-header" id="header">
+                <div class="container">
+                    <div class="header-container">
+                        <div class="header-logo">
+                            <a href="index.html"><img src="./images/logov2.png" alt="logo"></a>
+                        </div>
+                        <div class="header-nav h5">
+                            <nav>
+                                <ol>
+                                    <li><a href="#community">Community</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#getstarted">Get Started</a></li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <a href="https://coinmarketcap.com" target="_blank"><button class="btn_buy glow-on-hover">Buy
+                                STAAR</button></a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main 100vh Screen -->
+            <section class="fullwidth"></section>
+            <section class="main__screen">
+                <!-- Hero Section -->
+                <div class="hero">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1>STAAR</h1>
+                            <h2>Together we will reach the STAAR's</h2>
+                            <a href="https://coinmarketcap.com" target="_blank"><button
+                                    class="btn_buy_white glow-on-hover-white">Buy
+                                    STAAR</button></a>
+                        </div>
+                    </div>
+                </div>
         </div>
-    </section>
-    <!-- Main 100vh Screen -->
-    <section class="fullwidth"></section>
-    <section class="main__screen">
-        <!-- Hero Section -->
-        <div class="hero">
+        </section>
+        <!-- Modal Section -->
+        <section class="modal" id="about">
             <div class="container">
-                <div class="hero-text">
-                    <h1>STAAR</h1>
-                    <h2>Together we will reach the STAAR's</h2>
-                    <a href="https://coinmarketcap.com" target="_blank"><button
-                            class="btn_buy_white glow-on-hover-white">Buy
-                            STAAR</button></a>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <!-- Modal Section -->
-    <section class="modal">
-        <div class="container">
-            <div class="modal-body">
-                <div class="modal-body__text-box">
-                    <h1>
-                        I am the STAAR</h1>
-                    <h2>Join me and together we will reach the STAAR's.</h2>
+                <div class="modal-body">
+                    <div class="modal-body__text-box">
+                        <h1>
+                            I am the STAAR</h1>
+                        <h2>Join me and together we will reach the STAAR's.</h2>
 
-                    <div class="social__container">
-                        <div class="social__items">
-                            <a class="social__links" target="_blank" href="https://t.me/staartoken"><i
-                                    class="fa-brands fa-telegram"></i></a>
-                            <a class="social__links" target="_blank" href="https://twitter.com/staartoken"><i
-                                    class="fa-brands fa-twitter"></i></a>
-                            <a class="social__links" target="_blank"
-                                href="https://coinmarketcap.com/currencies/staar/"><img class="coinmarketcap"
-                                    target="_blank" src="./images/coins-images/coinmarketcap.svg"
-                                    alt="coinmarketcap"></a>
-                            <a class="social__links" target="_blank"
-                                href="https://bscscan.com/token/0x7ee8cfa715799e43c7a993369da68160efc9d505"><img
-                                    class="BscScan" target="_blank"
-                                    src="./images/coins-images/bscscan-logo-light-circle.svg" alt="BscScan"></a>
-                        </div>
-                    </div>
-                </div>
-                <img src="./images/modal-rocket.png" alt="rocket" width="245" height="245" class="modal-img">
-            </div>
-        </div>
-    </section>
-    <!-- Guide Section -->
-    <section class="guide" id="getstarted">
-        <div class="container">
-            <div class="guide__inner grid-12">
-                <div class="heading heading--decorator guide__heading">Quick Start Guide</div>
-
-                <div class="guide__items grid-12">
-                    <div class="guide__item guide__item--one">
-                        <div class="guide-item__number">01</div>
-                        <div class="guide-item__img-wrap">
-                            <img src="./images/MetaMask_Fox.png" alt="" class="guide-item__img guide-item__img--one">
-                        </div>
-                        <div class="guide-item__heading">Create MetaMask wallet</div>
-                        <div class="guide-item__text">Create a MetaMask Wallet using either a desktop computer or an
-                            iOS/Android
-                            mobile device. That will allow you to buy, sell, send, and receive STAAR</div>
-                    </div>
-
-                    <div class="guide__item guide__item--two">
-                        <div class="guide-item__number">02</div>
-                        <div class="guide-item__img-wrap">
-                            <img src="./images/bnb_logo.png" alt="bnb"
-                                class="guide-item__img guide-item__img--two">
-                        </div>
-                        <div class="guide-item__heading">Send BNB to your wallet</div>
-                        <div class="guide-item__text">You can buy Binance Coin (BNB) directly on MetaMask or transfer it
-                            to
-                            your
-                            MetaMask Wallet from exchanges like Coinbase, Binance, etc.</div>
-                    </div>
-
-                    <div class="guide__item guide__item--three">
-                        <div class="guide-item__number">03</div>
-                        <div class="guide-item__img-wrap">
-                            <img src="./images/MetaMask_Fox_connect.png" alt="connectwallet"
-                                class="guide-item__img guide-item__img--three">
-                        </div>
-                        <div class="guide-item__heading">Connect your wallet</div>
-                        <div class="guide-item__text">Access your wallet by clicking ‘Connect to a wallet’ and selecting
-                            MetaMask.</div>
-                    </div>
-
-                    <div class="guide__item guide__item--four">
-                        <div class="guide-item__number">04</div>
-                        <div class="guide-item__img-wrap">
-                            <img src="./images/logo_guide.png" alt="" class="guide-item__img guide-item__img--four">
-                        </div>
-                        <div class="guide-item__heading">Swap BNB for STAAR</div>
-                        <div class="guide-item__text">You can start swapping as soon as you have BNB available! Press
-                            ‘Select
-                            a
-                            token’ and enter the token address or search for it on the tokens list.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__top">
-                    <div class="logo footer__logo">
-                        <div class="logo__link">
-                            <img src="./images/logo.png" alt="logo" width="56" height="56" class="logo__img">
-                        </div>
-                    </div>
-                    <nav class="footer__nav">
-                        <ul class="menu-list footer__menu-list">
-                            <li class="menu-list__item">
-                                <a href="#community" class="menu-list__link">Community</a>
-                            </li>
-                            <li class="menu-list__item">
-                                <a href="#about" class="menu-list__link">About</a>
-                            </li>
-                            <li class="menu-list__item">
-                                <a href="#getstarted" class="menu-list__link">Get Started</a>
-                            </li>
-                        </ul>
                         <div class="social__container">
                             <div class="social__items">
-                                <a class="social__links__footer" target="_blank" href="https://t.me/staartoken"><i
+                                <a class="social__links" target="_blank" href="https://t.me/staartoken"><i
                                         class="fa-brands fa-telegram"></i></a>
-                                <a class="social__links__footer" target="_blank" href="https://twitter.com/staartoken"><i
+                                <a class="social__links" target="_blank" href="https://twitter.com/staartoken"><i
                                         class="fa-brands fa-twitter"></i></a>
-                                <a class="social__links__footer" target="_blank"
+                                <a class="social__links" target="_blank"
                                     href="https://coinmarketcap.com/currencies/staar/"><img class="coinmarketcap"
                                         target="_blank" src="./images/coins-images/coinmarketcap.svg"
                                         alt="coinmarketcap"></a>
-                                <a class="social__links__footer" target="_blank"
+                                <a class="social__links" target="_blank"
                                     href="https://bscscan.com/token/0x7ee8cfa715799e43c7a993369da68160efc9d505"><img
                                         class="BscScan" target="_blank"
                                         src="./images/coins-images/bscscan-logo-light-circle.svg" alt="BscScan"></a>
                             </div>
                         </div>
-                    </nav>
-                </div>
-                <div class="footer__bottom">
+                    </div>
+                    <img src="./images/modal-rocket.png" alt="rocket" width="245" height="245" class="modal-img">
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
+        <!-- Guide Section -->
+        <section class="guide" id="getstarted">
+            <div class="container">
+                <div class="guide__inner grid-12">
+                    <div class="heading heading--decorator guide__heading">Quick Start Guide</div>
+
+                    <div class="guide__items grid-12">
+                        <div class="guide__item guide__item--one">
+                            <div class="guide-item__number">01</div>
+                            <div class="guide-item__img-wrap">
+                                <img src="./images/MetaMask_Fox.png" alt=""
+                                    class="guide-item__img guide-item__img--one">
+                            </div>
+                            <div class="guide-item__heading">Create MetaMask wallet</div>
+                            <div class="guide-item__text">Create a MetaMask Wallet using either a desktop computer or an
+                                iOS/Android
+                                mobile device. That will allow you to buy, sell, send, and receive STAAR</div>
+                        </div>
+
+                        <div class="guide__item guide__item--two">
+                            <div class="guide-item__number">02</div>
+                            <div class="guide-item__img-wrap">
+                                <img src="./images/bnb_logo.png" alt="bnb" class="guide-item__img guide-item__img--two">
+                            </div>
+                            <div class="guide-item__heading">Send BNB to your wallet</div>
+                            <div class="guide-item__text">You can buy Binance Coin (BNB) directly on MetaMask or
+                                transfer it
+                                to
+                                your
+                                MetaMask Wallet from exchanges like Coinbase, Binance, etc.</div>
+                        </div>
+
+                        <div class="guide__item guide__item--three">
+                            <div class="guide-item__number">03</div>
+                            <div class="guide-item__img-wrap">
+                                <img src="./images/MetaMask_Fox_connect.png" alt="connectwallet"
+                                    class="guide-item__img guide-item__img--three">
+                            </div>
+                            <div class="guide-item__heading">Connect your wallet</div>
+                            <div class="guide-item__text">Access your wallet by clicking ‘Connect to a wallet’ and
+                                selecting
+                                MetaMask.</div>
+                        </div>
+
+                        <div class="guide__item guide__item--four">
+                            <div class="guide-item__number">04</div>
+                            <div class="guide-item__img-wrap">
+                                <img src="./images/logo_guide.png" alt="" class="guide-item__img guide-item__img--four">
+                            </div>
+                            <div class="guide-item__heading">Swap BNB for STAAR</div>
+                            <div class="guide-item__text">You can start swapping as soon as you have BNB available!
+                                Press
+                                ‘Select
+                                a
+                                token’ and enter the token address or search for it on the tokens list.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__top">
+                        <div class="logo footer__logo">
+                            <div class="logo__link">
+                                <img src="./images/logo.png" alt="logo" width="56" height="56" class="logo__img">
+                            </div>
+                        </div>
+                        <nav class="footer__nav">
+                            <ul class="menu-list footer__menu-list">
+                                <li class="menu-list__item">
+                                    <a href="#community" class="menu-list__link">Community</a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a href="#about" class="menu-list__link">About</a>
+                                </li>
+                                <li class="menu-list__item">
+                                    <a href="#getstarted" class="menu-list__link">Get Started</a>
+                                </li>
+                            </ul>
+                            <div class="social__container">
+                                <div class="social__items">
+                                    <a class="social__links__footer" target="_blank" href="https://t.me/staartoken"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a class="social__links__footer" target="_blank"
+                                        href="https://twitter.com/staartoken"><i class="fa-brands fa-twitter"></i></a>
+                                    <a class="social__links__footer" target="_blank"
+                                        href="https://coinmarketcap.com/currencies/staar/"><img class="coinmarketcap"
+                                            target="_blank" src="./images/coins-images/coinmarketcap.svg"
+                                            alt="coinmarketcap"></a>
+                                    <a class="social__links__footer" target="_blank"
+                                        href="https://bscscan.com/token/0x7ee8cfa715799e43c7a993369da68160efc9d505"><img
+                                            class="BscScan" target="_blank"
+                                            src="./images/coins-images/bscscan-logo-light-circle.svg" alt="BscScan"></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="footer__bottom">
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
-    <!-- JavaScript -->
-    <script src="./scripts/main.js"></script>
+        <!-- JavaScript -->
+        <script src="./scripts/main.js"></script>
 </body>
 
 </html>
