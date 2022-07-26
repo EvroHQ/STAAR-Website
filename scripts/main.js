@@ -83,5 +83,4 @@ function closeMenu() {
             $('div.x, div.z').removeClass('collapse');
         }, 70);
     }, 100);
-
 }
