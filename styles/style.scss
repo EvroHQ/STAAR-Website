@@ -624,6 +624,7 @@ li:hover {
 
 .footer__logo {
     margin-right: 40px;
+    z-index: 10;
 }
 
 .logo {
@@ -650,6 +651,7 @@ li:hover {
 .menu-list {
     display: flex;
     align-items: center;
+    z-index: 10;
 }
 
 .menu-list__item {
@@ -680,6 +682,7 @@ li:hover {
     justify-content: center;
     align-items: center;
     transition: background 250ms ease-in-out;
+    z-index: 10;
 }
 
 .social__links__footer:hover {
@@ -1032,7 +1035,7 @@ li:hover {
 // Mobile Menu //
 
 .max_index {
-    z-index: 9999;
+    z-index: 100;
 }
 
 div.burger {
@@ -1055,10 +1058,6 @@ div.z {
     bottom: 0px;
     background: #ffffff;
     border-radius: 2px;
-    -webkit-transition: all 200ms ease-out;
-    -moz-transition: all 200ms ease-out;
-    -ms-transition: all 200ms ease-out;
-    -o-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
 }
 
@@ -1079,55 +1078,27 @@ div.z {
 
 div.collapse {
     top: 20px;
-    -webkit-transition: all 70ms ease-out;
-    -moz-transition: all 70ms ease-out;
-    -ms-transition: all 70ms ease-out;
-    -o-transition: all 70ms ease-out;
     transition: all 70ms ease-out;
 }
 
 
 div.rotate30 {
-    -ms-transform: rotate(30deg);
-    -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
-    -webkit-transition: all 50ms ease-out;
-    -moz-transition: all 50ms ease-out;
-    -ms-transition: all 50ms ease-out;
-    -o-transition: all 50ms ease-out;
     transition: all 50ms ease-out;
 }
 
 div.rotate150 {
-    -ms-transform: rotate(150deg);
-    -webkit-transform: rotate(150deg);
     transform: rotate(150deg);
-    -webkit-transition: all 50ms ease-out;
-    -moz-transition: all 50ms ease-out;
-    -ms-transition: all 50ms ease-out;
-    -o-transition: all 50ms ease-out;
     transition: all 50ms ease-out;
 }
 
 div.rotate45 {
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    -webkit-transition: all 100ms ease-out;
-    -moz-transition: all 100ms ease-out;
-    -ms-transition: all 100ms ease-out;
-    -o-transition: all 100ms ease-out;
     transition: all 100ms ease-out;
 }
 
 div.rotate135 {
-    -ms-transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
-    -webkit-transition: all 100ms ease-out;
-    -moz-transition: all 100ms ease-out;
-    -ms-transition: all 100ms ease-out;
-    -o-transition: all 100ms ease-out;
     transition: all 100ms ease-out;
 }
 
@@ -1138,21 +1109,13 @@ div.menu-bg {
     position: fixed;
     top: 0;
     left: 0;
-    background: #000000f5;
+    background: #000;
     opacity: 0;
-    -webkit-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -moz-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -ms-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -o-transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    transition: all 300ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+    transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
 }
 
 div.menu-bg.animate {
     opacity: 0.9;
-    -webkit-transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -moz-transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -ms-transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -o-transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
     transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
 }
 
@@ -1173,7 +1136,7 @@ div.menu {
     margin: 0 auto;
     z-index: 0;
     align-items: center;
-    transition: 0.5s all;
+    transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
     opacity: 0;
     backdrop-filter: blur(10px);
 }
@@ -1188,10 +1151,6 @@ div.menu ol li {
     margin-top: 40px;
     text-align: center;
     font-size: 19px;
-    -webkit-transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -moz-transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -ms-transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -o-transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
     transition: all 150ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
 }
 
@@ -1212,111 +1171,45 @@ section>div {
 div.menu li.animate {
     font-size: 19px;
     opacity: 1;
-    -webkit-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -moz-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -ms-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
-    -o-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
     transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
 }
 
 .menu-splitL li:nth-of-type(1) {
     opacity: 1;
-    transition-delay: 0.12s;
 }
 
 .menu-splitL li.animate:nth-of-type(1) {
-    transition-delay: 0.0s;
     opacity: 1;
 }
 
 .menu-splitL li:nth-of-type(2) {
-    transition-delay: 0.09s;
     opacity: 1;
 }
 
 .menu-splitL li.animate:nth-of-type(2) {
-    transition-delay: 0.05s;
     opacity: 1;
 }
 
 .menu-splitL li:nth-of-type(3) {
-    transition-delay: 0.046s;
     opacity: 1;
 }
 
 .menu-splitL li.animate:nth-of-type(3) {
-    transition-delay: 0.1s;
     opacity: 1;
 }
 
 .menu-splitL li:nth-of-type(4) {
-    transition-delay: 0.03s;
     opacity: 1;
 }
 
 .menu-splitL li.animate:nth-of-type(4) {
-    transition-delay: 0.15s;
     opacity: 1;
 }
 
 .menu-splitL li:nth-of-type(5) {
-    transition-delay: 0.0s;
     opacity: 1;
 }
 
 .menu-splitL li.animate:nth-of-type(5) {
-    transition-delay: 0.2s;
-    opacity: 1;
-}
-
-
-
-.menu-splitR li:nth-of-type(1) {
-    transition-delay: 0.12s;
-    opacity: 1;
-}
-
-.menu-splitR li.animate:nth-of-type(1) {
-    transition-delay: 0.0s;
-    opacity: 1;
-}
-
-.menu-splitR li:nth-of-type(2) {
-    transition-delay: 0.069s;
-    opacity: 1;
-}
-
-.menu-splitR li.animate:nth-of-type(2) {
-    transition-delay: 0.05s;
-    opacity: 1;
-}
-
-.menu-splitR li:nth-of-type(3) {
-    transition-delay: 0.06s;
-    opacity: 1;
-}
-
-.menu-splitR li.animate:nth-of-type(3) {
-    transition-delay: 0.1s;
-    opacity: 1;
-}
-
-.menu-splitR li:nth-of-type(4) {
-    transition-delay: 0.03s;
-    opacity: 1;
-}
-
-.menu-splitR li.animate:nth-of-type(4) {
-    transition-delay: 0.15s;
-    opacity: 1;
-}
-
-.menu-splitR li:nth-of-type(5) {
-    transition-delay: 0.0s;
-    opacity: 1;
-}
-
-.menu-splitR li.animate:nth-of-type(5) {
-    transition-delay: 0.2s;
     opacity: 1;
 }

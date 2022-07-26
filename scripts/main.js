@@ -1,7 +1,5 @@
 // STAAR JS //
 
-// Mobile Menu Disable Scroll //
-
 // Header Sticky on Scroll //
 window.onload = (function () {
 
@@ -11,7 +9,7 @@ window.onload = (function () {
     }, { passive: true })
 });
 
-// Mobile Menu //
+// Open Menu on hamburger click //
 
 if ('ontouchstart' in window) { var click = 'touchstart'; }
 else { var click = 'click'; }
@@ -24,7 +22,7 @@ $('div.burger').on(click, function () {
 
 // Mobile Menu Scroll To Anchor //
 
-$('div.menu ol li a').on(click, function (e) {
+$('div.menu ol li').on(click, function (e) {
     e.preventDefault();
     closeMenu();
 
