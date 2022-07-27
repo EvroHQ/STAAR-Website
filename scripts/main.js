@@ -11,7 +11,7 @@ window.onload = (function () {
 
 // Open Menu on hamburger click //
 
-if ('touchstart' in window) { var click = 'touchstart'; }
+if ('ontouchstart' in window) { var click = 'touchstart'; }
 else { var click = 'click'; }
 
 
@@ -87,4 +87,30 @@ function closeMenu() {
             $('div.x, div.z').removeClass('collapse');
         }, 70);
     }, 100);
+}
+
+function CryptoAddressfunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("CryptoAddress");
+
+
+    /* Select the text field */
+    copyText.select();
+
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    //  navigator.clipboard.writeText(copyText.value);
+
+    navigator.clipboard.writeText(copyText.value)
+        .then(() => {
+            // Success!
+            alert("Copied the text: " + copyText.value);
+        })
+        .catch(err => {
+            console.log('Something went wrong', err);
+        });
+
+    /* Alert the copied text */
+
 }
