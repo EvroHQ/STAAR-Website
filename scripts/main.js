@@ -24,15 +24,14 @@ $('div.burger').on(click, function () {
 
 $('div.menu ol li a').on(click, function (e) {
     closeMenu();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
         });
     });
 });
