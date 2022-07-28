@@ -24,10 +24,13 @@ $('div.burger').on(click, function () {
 
 $('div.menu ol li a').on(click, function (e) {
     closeMenu();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
+    e.preventDefault();
+    setTimeout(() => {
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }, 175)
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
