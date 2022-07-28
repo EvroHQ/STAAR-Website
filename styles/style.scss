@@ -29,6 +29,30 @@ html {
     overflow: hidden;
 }
 
+// ScrollBar //
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #0e0e0e;
+}
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom,
+    #3f0000,
+    #da002d,
+    #ffe200);;
+}
+
 :root {
     --background-color: #141825;
     --font-family-sans-serif: 'Nunito', sans-serif;
@@ -662,7 +686,11 @@ li:hover {
     font-family: var(--font-family-worksans);
     font-weight: 400;
     text-decoration: none;
-    transition: 0.3s all ease-in-out;
+    transition: background 100ms ease;
+}
+
+.menu-list__link:hover {
+    color: #da002d;
 }
 
 .links-list {
@@ -680,7 +708,7 @@ li:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background 250ms ease-in-out;
+    transition: background 100ms ease;
     z-index: 10;
 }
 
@@ -939,7 +967,7 @@ div.menu li.animate {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background 250ms ease-in-out;
+    transition: background 100ms ease;
 }
 
 .social__links:hover {
@@ -1280,13 +1308,17 @@ div.menu li.animate {
 
 .crypto-input-select p {
     width: 165px;
-    color: #da002d;
-    font-family: var(--font-family-worksans);
     font-size: 14px;
     align-items: center;
     font-weight: 600;
     cursor: default;
     margin-top: 4px;
+    font-family: var(--font-family-worksans);
+    background: linear-gradient(to right,
+            #da002d,
+            #ffe200);
+    background-clip: text;
+    color: transparent;
 }
 
 select {
