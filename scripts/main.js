@@ -22,6 +22,16 @@ $('div.burger').on(click, function () {
 
 // Mobile Menu Scroll To Anchor //
 
+let topOffset;
+
+$(window).scroll(function() {
+    if($(this).scrollTop() < 1 ) {
+        topOffset = 100;
+    } else {
+        topOffset = 100;
+    }
+})
+
 $('div.menu ol li a').on(click, function (e) {
     closeMenu();
     e.preventDefault();
@@ -32,11 +42,12 @@ $('div.menu ol li a').on(click, function (e) {
         });
     }, 175)
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-        });
-    });
+    let target = $(this.getAttribute('href'));
+    if(target.length) {
+        $('html, body').animate({
+            scrollTop: target.offset().top - topOffset
+        }, 250);
+    }
 });
 
 
@@ -75,10 +86,10 @@ function closeMenu() {
         $('div.x').removeClass('rotate45').addClass('rotate30');
         $('div.z').removeClass('rotate135').addClass('rotate150');
         $('div.menu-bg').removeClass('animate');
-        $('.menu-splitL').removeClass('opacity');
         $('body').removeClass('overflow');
         $('div.menu').removeClass('max_index');
         $('div.menu-bg').removeClass('max_index');
+        $('.menu-splitL').removeClass('opacity');
 
         setTimeout(function () {
             $('div.x').removeClass('rotate30');
