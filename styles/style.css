@@ -1085,6 +1085,7 @@ select {
 
 section.about {
   margin-bottom: 10em;
+  margin-top: -40px;
 }
 
 .about__us__text {
