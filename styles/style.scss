@@ -165,6 +165,114 @@ h6,
     margin-left: auto;
 }
 
+.hero-text-404 {
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hero-text-404 h1 {
+    font-family: var(--font-family-worksans);
+    max-width: 1100px;
+    padding-top: 80px;
+    font-weight: 800;
+    background: linear-gradient(to right,
+            #3f0000,
+            #da002d,
+            #ffe200);
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin: 0 auto;
+    color: transparent;
+    font-size: calc(80px + 100 * (100vw - 100px) / 1000);
+}
+
+.hero-text-404 h2 {
+    display: flex;
+    max-width: 800px;
+    font-family: var(--font-family-worksans);
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    font-size: calc(16px + (24 - 14) * ((100vw - 100px) / (1600 - 300)));
+}
+
+.hero-text-404 p {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    font-size: calc(16px + 2 * (100vw - 100px) / 1000);
+}
+
+.button-2-0:before {
+    content: "";
+    background-color: red;
+    background-image: linear-gradient(180deg, #1900ff, #262626);
+}
+
+.button-2-0 {
+    display: inline-block;
+    margin: 50px auto;
+    justify-content: center;
+    max-width: 178px;
+    padding: 14px 36px;
+    border-radius: 28px;
+    background-image: linear-gradient(180deg, #262626, #262626);
+    transition: 0.5s ease;
+    color: #fff;
+    font-size: 16px;
+    font-family: var(--font-family-worksans);
+    line-height: 21px;
+    font-weight: 500;
+}
+
+.button-2-0:hover {
+    background:
+        linear-gradient(to right,
+            #3f0000,
+            #da002d,
+            #ffe200);
+}
+
+.section-name {
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 18px;
+}
+
+@media screen and (max-width: 576px) {
+    .section-name {
+        flex-direction: column;
+    }
+}
+
+.text-block-43 {
+    font-family: var(--font-family-worksans);
+    font-size: calc(18px + 16 * (100vw - 100px) / 1000);
+    line-height: 1.4;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -.3px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.text-block-44 {
+    font-family: var(--font-family-worksans);
+    font-size: calc(18px + 16 * (100vw - 100px) / 1000);
+    line-height: 1.4;
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: -.3px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
 .hero-text h1 {
     font-family: var(--font-family-worksans);
     max-width: 1100px;
@@ -1660,4 +1768,3 @@ section.about {
         max-width: 1140px;
     }
 }
-
